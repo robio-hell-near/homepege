@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: pink;
+    padding: 10px;
+}
+header h1 {
+    margin: 0; 
+}
+.top {
+    display: flex;
+}
+#target {
+    margin-left: auto;
+    font-weight: bold;
+    z-index: 200;
+}
+.poji {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+.mclose {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: gray;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 100;
+}
+.mopen {
+    width: 50%;
+    overflow: auto;
+}
+nav {
+    padding-top: 80px;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    padding: 5px;  
+    background: yellow;
+}
+#koumoku1, #koumoku2, #koumoku3, #koumoku4, #koumoku5, #koumoku6 {
+    padding: 5px;
+    text-align: center;
+    border: solid 0.5px;
+    background: red;
+}
+.kclose {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.kopen {
+    max-height: 100vh;
+    overflow: auto;
+}
+.kiji {
+    display: flex;
+    border: solid 0.5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.backy {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.8;
+    z-index: 50;
+}
+main {
+    background: skyblue;
+    padding: 10px;
+    margin-top: 5px;
+}
+main img {
+    width: 100px;
+    height: 100px;
+}
+.scrollback {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    background: white;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+.scrollmenu {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: white;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+.scrollanime {
+    animation: scroll 3s;
+    visibility: visible;
+    animation-fill-mode: forwards;
+}
+@keyframes scroll {
+    33% {
+        opacity: 0.3;
+    }
+    66% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+side {
+    display: block;
+    background: orange;
+    padding: 10px;
+    margin-top:5px;
+}
+side img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.kiji2 {
+    border: solid 0.5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background: green;
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 601px) {
+  
+    body {
+        max-width: 1000px;
+    }    
+warapper {
+    display: flex;
+}
+    main {
+        width: 70%;
+    }
+    side {
+        width: 30%;
+        margin-left: 5px;
+    }
+}
