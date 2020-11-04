@@ -64,6 +64,7 @@ nav li {
 .kopen {
     max-height: 100vh;
     overflow: auto;
+    z-index: 50;
 }
 .kiji {
     display: flex;
@@ -150,15 +151,49 @@ footer {
     text-align: center;
     font-weight: bold;
 }
+gnav {
+    display: none;
+}
 
 @media screen and (min-width: 601px) {
   
     body {
         max-width: 1000px;
     }    
-warapper {
+    #target {
+        display: none;
+    }
+    gnav {
+        display: flex;
+    }
+    .s {
+        width: 20%;
+        position: relative;
+    }
+    .m10 {
+        height: 0;
+    }
+    .m20 {
+        height: 100%;
+        overflow: inherit;
+    }
+    gnav ul {
+        position: absolute;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        transition: 0.5s;
+        width: 100%;
+    }
+    gnav li {
+        list-style: none;
+        padding: 10px;
+        background: pink;
+    }
+    warapper {
     display: flex;
-}
+    }
+    
     main {
         width: 70%;
     }
@@ -166,4 +201,10 @@ warapper {
         width: 30%;
         margin-left: 5px;
     }
+    #koumoku10, #koumoku20, #koumoku30, #koumoku40, #koumoku50 {
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+    
 }
